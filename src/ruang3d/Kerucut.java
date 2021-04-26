@@ -2,7 +2,7 @@ package ruang3d;
 import bidang2d.Lingkaran;
 
 public class Kerucut extends Lingkaran{
-    double tinggi, luas, volume;
+    public double tinggi, luas, volume;
     
     public Kerucut(double r, double tinggi){
         super(r);
@@ -17,10 +17,10 @@ public class Kerucut extends Lingkaran{
 
     @Override
     public double hitungLuas(){
-        return super.luas + (PHI*this.r*apotema());
+        return super.luas + (PHI*r*apotema());
     }
 
     public double hitungVolume(){
-        return super.luas*this.tinggi/3;
+        return super.luas*tinggi/3;
     }
 }

@@ -1,13 +1,13 @@
 package ruang3d;
 
 public class CincinBola extends Bola {
-    public double taliBusur, tinggi, luas, volume, rPuncak, rDasar;
+    public double taliBusur, tinggi, luas, volume, rAtas, rDasar;
     
-    public CincinBola(double r, double taliBusur, double tinggi, double rPuncak, double rDasar){
+    public CincinBola(double r, double taliBusur, double tinggi, double rAtas, double rDasar){
         super(r);
         this.taliBusur = taliBusur;
         this.tinggi = tinggi;
-        this.rPuncak = rPuncak;
+        this.rAtas = rAtas;
         this.rDasar = rDasar;
         this.luas = hitungLuas();
         this.volume = hitungVolume();
@@ -15,10 +15,11 @@ public class CincinBola extends Bola {
 
     @Override
     public double hitungLuas(){
-        return PHI *(2 * r * tinggi + taliBusur * ( rPuncak + rDasar));
+        return PHI *(2.0 * r * tinggi + taliBusur * ( rAtas + rDasar));
     }
 
+    @Override
     public double hitungVolume(){
-        return PHI * tinggi * Math.pow(this.taliBusur,2) / 6;
+        return (PHI * tinggi * Math.pow(this.taliBusur,2)) / 6.0;
     }
 }

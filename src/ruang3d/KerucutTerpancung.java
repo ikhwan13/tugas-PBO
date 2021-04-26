@@ -1,10 +1,11 @@
 package ruang3d;
 
 public class KerucutTerpancung extends Kerucut {
-    public double rAtas, tinggi, luas, volume; 
+    public double rAtas, luas, volume; 
     
     public KerucutTerpancung(double r, double tinggi, double rAtas) {
         super(r,tinggi);
+        this.rAtas=rAtas;
         this.luas=hitungLuas();
         this.volume=hitungVolume();
     }

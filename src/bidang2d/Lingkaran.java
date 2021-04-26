@@ -1,6 +1,6 @@
 package bidang2d;
 
-public class Lingkaran implements Bidang2d {
+public class Lingkaran implements Bidang2D {
     public double r, keliling, luas;
 
     public Lingkaran(double r){
@@ -11,11 +11,11 @@ public class Lingkaran implements Bidang2d {
 
     @Override
     public double hitungKeliling() {
-        return 2 * PHI * r;
+        return r * 2 * PHI;
     }
 
     @Override
     public double hitungLuas() {
-        return PHI * r * r;
+        return Math.pow(r,2)*PHI;
     }
 }
